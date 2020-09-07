@@ -39,7 +39,7 @@ export default function TodoForm( firstTodo ) {
         <div>
             <form onSubmit={doSubmit}>
                 <input type="text" name="task" value={todo.task}  onChange={inputChange} />
-                <button type="submit" >X</button>
+                <button type="submit" />
             </form>
         </div>
     )
