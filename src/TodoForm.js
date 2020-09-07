@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { uuid } from 'uuidv4';
+
 
 //Renders form necessary to add Todo to list
 
@@ -17,12 +19,25 @@ export default function TodoForm( firstTodo ) {
         setTodo({...todo, task: e.target.value});
 
     }
+    function doSubmit(e){
+        //forms todo from state to list of todos
+        //will take in event from DOM
+        e.preventDefault();
+        if (todo.task.trim()) {
+            firstTodo({...todo, id: uuid.v4() })
+            //new input?
+            setTodo({ ...todo, task: "" })
+
+
+        }
+
+    }
 
 
    
     return (
         <div>
-            <form>
+            <form onSubmit={doSubmit}>
                 <input type="text" name="task" value={todo.task}  onChange={inputChange} />
                 <button type="submit" >X</button>
             </form>
