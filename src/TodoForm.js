@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 //Renders form necessary to add Todo to list
 
-export default function TodoForm() {
+export default function TodoForm( firstTodo ) {
     const [todo, setTodo] = useState({
         id: "",
         //string
