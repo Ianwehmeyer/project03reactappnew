@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import TodoList from "./TodoList"
 import TodoForm from "./TodoForm"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
      <p>React Todo list goes here</p>
      <TodoForm firstTodo={firstTodo} />
+     <TodoList todos={todos} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ToDo() {
+export default function ToDo({todo}) {
     //renders todo from TodoList array
     //for reference - const [state, setState] = useState([]); 
 
@@ -8,8 +8,12 @@ export default function ToDo() {
     //task
     //delete button
     return (
-        <div>
-            
+        <div style={{display: "flex"}}>
+            <input type="checkbox" />
+            <li style={{color: "white", 
+            textDecoration: todo.completed ? "line-through" : null}} > 
+            {todo.task} </li>
+            <button>Delete</button>
         </div>
     )
 }
