@@ -5,7 +5,7 @@ export default function TodoList({ todos }) {
     //renders list of todos in array
     return (
         <ul>
-            {todos.map(todo =>(
+            {todos.map(todo => (
                 <Todo key={todo.id} todo={todo} />
             ))
                 //map over todos
