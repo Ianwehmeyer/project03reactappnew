@@ -24,13 +24,10 @@ export default function TodoForm( firstTodo ) {
         //will take in event from DOM
         e.preventDefault();
         if (todo.task.trim()) {
-            firstTodo({...todo, id: uuid.v4() })
+            firstTodo({ ...todo, id: uuid() });
             //new input?
-            setTodo({ ...todo, task: "" })
-
-
+            setTodo({ ...todo, task: "" });
         }
-
     }
 
 
@@ -39,7 +36,7 @@ export default function TodoForm( firstTodo ) {
         <div>
             <form onSubmit={doSubmit}>
                 <input type="text" name="task" value={todo.task}  onChange={inputChange} />
-                <button type="submit" />
+                <button type="submit">Enter</button>
             </form>
         </div>
     )
