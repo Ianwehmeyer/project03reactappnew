@@ -21,7 +21,7 @@ export default function TodoForm(props) {
     return (
         <div>
             <form>
-                <input type="text" name="task" ref={taskRef} />
+                <input type="text" name="task" ref={taskRef} placeholder="Enter To Do's" />
                 <button type="button" onClick={handleClick}>Enter</button>
             </form>
         </div>

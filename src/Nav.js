@@ -11,8 +11,8 @@ export default function Nav() {
                 <ul className="ulTest">
                 
                     <li><Link to="/">To Do List</Link></li>
+                    <li><Link to="/Contacts">Contacts</Link></li>
                     <li><Link to="/About">About</Link></li>
-                    <li><Link to="/Contact">Contact</Link></li>
                 
                 </ul>
             </div>
