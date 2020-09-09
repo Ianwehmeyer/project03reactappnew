@@ -3,9 +3,6 @@ import './App.css';
 import TodoList from "./TodoList" 
 import TodoForm from "./TodoForm"
 
-
-
-
 const LOCAL_STORAGE_KEY = "react-todo-list-todos"
 
 function TodoStorage() {

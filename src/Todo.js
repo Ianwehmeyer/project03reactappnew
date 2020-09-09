@@ -16,7 +16,7 @@ export default function ToDo({todo, slashComplete, deleteTodo }) {
 
 
     return (
-        <div style={{display: "flex"}}>
+        <div className="checkBox">
             <input type="checkbox" onClick={checkBoxClick} />
             <li style={{color: "black", 
             textDecoration: todo.completed ? "line-through" : null}} > 

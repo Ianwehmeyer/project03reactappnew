@@ -6,8 +6,8 @@ export default function Nav() {
     return (
         
         <nav className="Navbar" >
-            <div>Possible Hamburger button - do later</div>
-            <div>
+            
+            <div className="navBarLinks">
                 <ul>
                 
                     <li><Link to="/">To Do List</Link></li>
