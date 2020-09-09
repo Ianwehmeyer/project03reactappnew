@@ -7,10 +7,10 @@ export default function Nav() {
         <nav>
             <ul>
                 
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/one">One</Link></li>
-                <li><Link to="/two">Two</Link></li>
-                <li><Link to="/three">Three</Link></li>
+                <li><Link to="/">To Do List</Link></li>
+                <li><Link to="/About">About</Link></li>
+                <li><Link to="/Contact">Contact</Link></li>
+                
             </ul>
         </nav>
     )
