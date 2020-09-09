@@ -1,67 +1,27 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react'
 import './App.css';
-import TodoList from "./TodoList" 
-import TodoForm from "./TodoForm"
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Nav from './Nav'
+import TodoStorage from './TodoStorage'
+import Contacts from './Contacts'
+import About from './About'
 
-
-
-const LOCAL_STORAGE_KEY = "react-todo-list-todos"
-
-function App() {
-  const [todos, setTodos] =useState([]);
-  // 
-  //for reference - const [state, setState] = useState([]); state is array, because state is immutable use function to update array
-
-  function addTodo(todo) {
-    //forms todo from state to list of todos
-    //will take in event from DOM
-    //e.preventDefault();         
-    let newTodos = [...todos];
-    setTodos([todo, ...newTodos])
-  }
-  useEffect(() => {
-    const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-    if (storageTodos) {
-      setTodos(storageTodos)
-    }
-    //now todos are consistent when we reset the browser
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos)) 
-    
-  },[todos])
-
-  function slashComplete(id) {
-    setTodos(
-      todos.map(todo => {
-        if (todo.id === id) {
-          return {
-            ...todo,
-            completed: !todo.completed
-          }
-        }
-        return todo;
-      })
-    )
-  }
-  function deleteTodo(id) {
-    setTodos(todos.filter(todo => todo.id !== id));
-    //filter removes items from the array - want to remove items if the id is not the one I'm looking for
-    //filter uses function to determine whether or not to keep item in an array :)
-  }
-  
-
-
+export default function App() {
   return (
-    <div className="App">
-     
-     <TodoForm addTodo={addTodo}  todos={todos} />
-     <TodoList todos={todos} slashComplete={slashComplete} 
-     deleteTodo={deleteTodo} />
-     
+    <div>
+      <BrowserRouter>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={TodoStorage}/>
+          <Route path="/Contacts" exact component={Contacts} />
+          <Route path="/About" exact component={About} />
+          
+        </Switch>
+        
+      </div>
+    </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
