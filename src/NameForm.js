@@ -33,6 +33,7 @@ export default class extends Component {
         console.log(this.state.comment)
         return (
             <div>
+                <h1>Contact Us</h1>
                 <p>
                 <input value={this.state.fname} onChange={this.handleChange} placeholder="first name"/>
                 </p>
