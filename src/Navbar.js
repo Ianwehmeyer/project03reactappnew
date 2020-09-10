@@ -1,13 +1,17 @@
 import React from 'react'
 import './App.css'
 import {Link} from 'react-router-dom'
+import * as FaIcons from "react-icons/fa";
 
-export default function Nav() {
+export default function Navbar() {
     return (
         
-        <nav className="Navbar" >
+        <nav className="navbar" >
             
             <div className="navBarLinks">
+                <Link to="#" className='menu-bars'>
+                    <FaIcons.FaBars/>
+                </Link>
                 <ul className="ulTest">
                 
                     <li><Link to="/">To Do List</Link></li>

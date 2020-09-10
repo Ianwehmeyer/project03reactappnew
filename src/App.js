@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import Nav from './Nav'
+import Nav from './Navbar'
 import TodoStorage from './TodoStorage'
 import Contacts from './Contacts'
 import About from './About'
+
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <div className="App">
         
         <Nav />
+        
         <Switch>
           <Route path="/" exact component={TodoStorage}/>
           <Route path="/Contacts" exact component={Contacts} />

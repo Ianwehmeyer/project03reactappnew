@@ -3,7 +3,7 @@ import React from 'react'
 export default function About() {
     return (
         <div>
-            
+            <h1>About Us</h1>            
             <body>
             <p>
             I'm baby quinoa shaman hammock viral typewriter plaid single-origin coffee sriracha PBR. Before they sold out chia beard, church-key keffiyeh portland pour-over fingerstache banjo gluten-free etsy fashion axe kitsch truffaut direct trade. Flannel hell of beard, whatever keytar yuccie bicycle rights jean shorts kombucha. Normcore aesthetic quinoa whatever, raclette poutine la croix messenger bag sartorial hella blue bottle trust fund. Twee jianbing kitsch affogato drinking vinegar, cornhole pitchfork neutra. Kogi skateboard wayfarers flexitarian seitan raw denim, master cleanse organic sustainable.
