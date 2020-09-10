@@ -16,6 +16,7 @@ export default function ContactsClass() {
                 <input type="text" placeholder="Email" name="ename" ref={register({required: true })}>Email</input>
                 <input type="submit"/>
                 <textarea>Enter text here</textarea>
+                <button>Submit</button>
             </form>
         </div>
     )
