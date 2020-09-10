@@ -14,9 +14,9 @@ export default function Navbar() {
                 </Link>
                 <ul className="ulTest">
                 
-                    <li><Link to="/">To Do List</Link></li>
-                    <li><Link to="/Contacts">Contacts</Link></li>
-                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/">To Do List -</Link></li>
+                    <li><Link to="/Contacts"> Contacts -</Link></li>
+                    <li><Link to="/About"> About </Link></li>
                 
                 </ul>
             </div>
